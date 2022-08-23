@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Introduction from "../components/introduction";
 import AboutMe from "../components/aboutMe";
 import styles from '../styles/Home.module.css';
+import { useRouter } from 'next/router';
 import {
   InstagramIcon,
   githubIcon,
@@ -11,6 +12,7 @@ import {
 } from "../components/svg";
 
 const Home = () => {
+  const router = useRouter();
   return (
     <Box>
       <Navigation />
@@ -24,10 +26,10 @@ const Home = () => {
         right="auto"
         zIndex="10"
       >
-        <Box pb="30px" className={styles.svg}>{githubIcon}</Box>
-        <Box pb="30px" className={styles.svg}>{InstagramIcon}</Box>
-        <Box pb="30px" className={styles.svg}>{twitterIcon}</Box>
-        <Box pb="30px" className={styles.svg}>{linkedInIcon}</Box>
+        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://github.com/Essentiel16')}>{githubIcon}</Box>
+        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://www.instagram.com/mz_herbie/')}>{InstagramIcon}</Box>
+        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://twitter.com/folarin_abigail')}>{twitterIcon}</Box>
+        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://www.linkedin.com/in/abigail-idowu-515995168/')}>{linkedInIcon}</Box>
         <Box h="100px" w="1px" border="1px solid #8893AF" ml="8px" />
       </Box>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Box, Text, chakra, Button, GridItem , Grid} from '@chakra-ui/react';
+import { Box, Text, chakra, Button } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Typewriter from "typewriter-effect";
 
@@ -30,7 +30,7 @@ function Introduction() {
           }}
         />}
       </Text>
-      <Text color="brand.gray" w={{ base: "", md: "", lg: "560px" }} fontSize="18px" mt="16px" fontWeight="400">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <chakra.span color="brand.green" cursor="pointer" _hover={{ textDecoration: 'underline' }} onClick={() => router.push('https://enyata.com/')}>Enyata</chakra.span></Text>
+      <Text color="brand.gray" w={{ base: "", md: "", lg: "560px" }} fontSize="18px" mt="16px" fontWeight="400">I’m a software engineer specializing in building exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <chakra.span color="brand.green" cursor="pointer" _hover={{ textDecoration: 'underline' }} onClick={() => router.push('https://enyata.com/')}>Enyata</chakra.span></Text>
   
 
       <Button mt="60px" border="1px solid #64FFDA" bg="transparent" h="48px" fontWeight="400" padding="16px 24px" color="brand.green" fontSize="16px" _focus={{ bg: 'transparent' }} _hover={{ bg: 'rgba(00, 255, 218, 0.1)'}}>Hello</Button>
