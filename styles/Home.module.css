@@ -107,6 +107,88 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.sideEmail{
+  -webkit-box-align: center;
+  transform: rotate(90deg)
+}
+.imgWrapper {
+  display: inline-block;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.img {
+  opacity: 1;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.imgWrapper:hover {
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.img:hover,
+.imgWrapper:hover  {
+  /* opacity: 0.5; */
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  transform: scale(1);
+}
+
+.svg:hover svg path,
+.svg:hover{
+  fill: #64FFDA;
+  cursor: pointer;
+}
+
+.projectCard:hover .title,
+.projectCard:hover {
+  color: #64FFDA;
+}
+.projectCard:hover {
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+  cursor: pointer;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
 
 @media (max-width: 600px) {
   .grid {
@@ -118,10 +200,12 @@
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
-    border-color: #222;
+    /* border-color: #222; */
+    background: #081426;
   }
   .code {
-    background: #111;
+    /* background: #111; */
+    background: #081426;
   }
   .logo img {
     filter: invert(1);
