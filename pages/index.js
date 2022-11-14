@@ -26,10 +26,10 @@ const Home = () => {
         right="auto"
         zIndex="10"
       >
-        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://github.com/Essentiel16')}>{githubIcon}</Box>
-        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://www.instagram.com/mz_herbie/')}>{InstagramIcon}</Box>
-        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://twitter.com/folarin_abigail')}>{twitterIcon}</Box>
-        <Box pb="30px" className={styles.svg} onClick={() => router.push('https://www.linkedin.com/in/abigail-idowu-515995168/')}>{linkedInIcon}</Box>
+       <a href="https://github.com/abigail-dev-build"><Box pb="30px" className={styles.svg}>{githubIcon}</Box></a>
+        <a href="https://www.instagram.com/mz_herbie/"><Box pb="30px" className={styles.svg} >{InstagramIcon}</Box></a>
+        <a href="https://twitter.com/folarin_abigail"><Box pb="30px" className={styles.svg}>{twitterIcon}</Box></a>
+        <a href="https://www.linkedin.com/in/abigail-idowu-515995168/"><Box pb="30px" className={styles.svg} >{linkedInIcon}</Box></a>
         <Box h="100px" w="1px" border="1px solid #8893AF" ml="8px" />
       </Box>
 
