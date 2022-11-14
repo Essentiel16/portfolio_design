@@ -14,7 +14,8 @@ import {
   chakra,
   Button,
 } from "@chakra-ui/react";
-import { playIcon, githubIcon, hostingIcon, fileIcon } from "../components/svg";
+import Link from 'next/link';
+import { playIcon, githubIcon, fileIcon } from "../components/svg";
 import styles from "../styles/Home.module.css";
 
 function AboutMe() {
@@ -24,134 +25,127 @@ function AboutMe() {
       bg="brand.dark"
     >
       {/* section 1 */}
-      <Flex cursor="pointer">
-        <Text
-          color="brand.green"
-          fontSize={{ base: "20px", md: "", lg: "32px" }}
-          fontWeight="500"
-        >
-          01.
-        </Text>
-        <Text
-          ml="10px"
-          color="brand.white"
-          fontSize={{ base: "20px", md: "", lg: "32px" }}
-          fontWeight="700"
-        >
-          About Me
-        </Text>
-        <Box
-          borderBottom="1px solid #8893AF"
-          w={{ base: "180px", md: "200px", lg: "300px" }}
-          h="1px"
-          mt="25px"
-          ml="20px"
-        />
-      </Flex>
-      <Grid templateColumns="repeat(12, 1fr)" gap={6}>
-        <GridItem colSpan={7} mt="35px">
-          <Text color="brand.gray" fontSize="20px">
-            Hello! My name is Brittany and I enjoy creating things that live on
-            the internet. My interest in web development started back in 2012
-            when I decided to try editing custom Tumblr themes — turns out
-            hacking together a custom reblog button taught me a lot about HTML &
-            CSS!
-          </Text>
-
-          <Text color="brand.gray" fontSize="20px" mt="12px">
-            Fast-forward to today, and I’ve had the privilege of working at an
-            advertising agency, a start-up, a huge corporation, and a
-            student-led design studio. My main focus these days is building
-            accessible, inclusive products and digital experiences at
-            Upstatement for a variety of clients.
-          </Text>
-
-          <Text color="brand.gray" fontSize="20px" mt="12px">
-            I also recently launched a course that covers everything you need to
-            build a web app with the Spotify API using Node & React.
-          </Text>
-
-          <Text color="brand.gray" fontSize="20px" mt="12px">
-            Here are a few technologies I’ve been working with recently:
-          </Text>
-
-          <Box w="300px" mt="12px">
-            <Flex d="flex" justifyContent="space-between">
-              <Flex>
-                <Box paddingTop="5px">{playIcon}</Box>
-                <Text ml="10px" fontSize="14px" color="brand.gray">
-                  JavaScript (ES6+)
-                </Text>
-              </Flex>
-              <Flex>
-                <Box paddingTop="5px">{playIcon}</Box>
-                <Text ml="10px" fontSize="14px" color="brand.gray">
-                  TypeScript
-                </Text>
-              </Flex>
-            </Flex>
-
-            <Flex d="flex" mt="8px" justifyContent="space-between">
-              <Flex>
-                <Box paddingTop="5px">{playIcon}</Box>
-                <Text ml="10px" fontSize="14px" color="brand.gray">
-                  React
-                </Text>
-              </Flex>
-              <Flex marginRight="26px">
-                <Box paddingTop="5px">{playIcon}</Box>
-                <Text ml="10px" fontSize="14px" color="brand.gray">
-                  Nextjs
-                </Text>
-              </Flex>
-            </Flex>
-          </Box>
-        </GridItem>
-        <GridItem
-          colSpan={5}
-          mt="35px"
-          paddingLeft="50px"
-          zIndex="50"
-          pos="relative"
-        >
-          <Box
-            h="330px"
-            w="300px"
-            zIndex="40"
-            borderRadius="4px"
-            transition="opacity 500ms linear 0s"
-            backgroundColor="rgb(232, 232, 232)"
-            inset="0px"
-            _hover={{
-              h: "360px",
-              w: "360px",
-            }}
-            className={styles.imgWrapper}
+      <Box id="about_section">
+        <Flex cursor="pointer">
+          <Text
+            color="brand.green"
+            fontSize={{ base: "20px", md: "", lg: "32px" }}
+            fontWeight="500"
           >
-            <Image
-              src="portfolio_image-removebg-preview 1.jpeg"
-              alt=""
-              h="100%"
-              w="100%"
-              objectFit="cover"
-              className={styles.img}
-            />
-          </Box>
+            01.
+          </Text>
+          <Text
+            ml="10px"
+            color="brand.white"
+            fontSize={{ base: "20px", md: "", lg: "32px" }}
+            fontWeight="700"
+          >
+            About Me
+          </Text>
           <Box
-            border="2px solid #64FFDA"
-            h="330px"
-            w="300px"
-            pos="absolute"
-            bottom="28%"
-            left="16%"
-            borderRadius="4px"
-            zIndex="-1"
+            borderBottom="1px solid #8893AF"
+            w={{ base: "180px", md: "200px", lg: "300px" }}
+            h="1px"
+            mt="25px"
+            ml="20px"
           />
-        </GridItem>
-      </Grid>
+        </Flex>
+        <Grid templateColumns="repeat(12, 1fr)" gap={6}>
+          <GridItem colSpan={7} mt="35px">
+            <Text color="brand.gray" fontSize="20px">
+              Hello! My name is Abigail and I enjoy creating beautiful pages
+              on the internet. My interest in web development started back in
+              2017 when I create amazing designs with Canva — turns out that brought out my curiosity in lerarning HTML/CSS.
+            </Text>
+
+            <Text color="brand.gray" fontSize="20px" mt="12px">
+              Fast-forward to today, and I’ve had the privilege of working at a
+              devShop, a start-up, and a educational organization. My main focus these days is building
+              accessible, inclusive products and digital experiences for a variety of clients.
+            </Text>
+
+            <Text color="brand.gray" fontSize="20px" mt="12px">
+              Here are a few technologies I’ve been working with recently:
+            </Text>
+
+            <Box w="300px" mt="12px">
+              <Flex d="flex" justifyContent="space-between">
+                <Flex>
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="14px" color="brand.gray">
+                    JavaScript (ES6+)
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="14px" color="brand.gray">
+                    TypeScript
+                  </Text>
+                </Flex>
+              </Flex>
+
+              <Flex d="flex" mt="8px" justifyContent="space-between">
+                <Flex>
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="14px" color="brand.gray">
+                    React
+                  </Text>
+                </Flex>
+                <Flex marginRight="26px">
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="14px" color="brand.gray">
+                    Nextjs
+                  </Text>
+                </Flex>
+              </Flex>
+            </Box>
+          </GridItem>
+          <GridItem
+            colSpan={5}
+            mt="35px"
+            paddingLeft="50px"
+            zIndex="50"
+            pos="relative"
+          >
+            <Box
+              h="330px"
+              w="300px"
+              zIndex="40"
+              borderRadius="4px"
+              transition="opacity 500ms linear 0s"
+              backgroundColor="rgb(232, 232, 232)"
+              inset="0px"
+              _hover={{
+                h: "360px",
+                w: "360px",
+              }}
+              className={styles.imgWrapper}
+            >
+              <Image
+                src="portfolio_image-removebg-preview 1.jpeg"
+                alt=""
+                h="100%"
+                w="100%"
+                objectFit="cover"
+                className={styles.img}
+              />
+            </Box>
+            <Box
+              border="2px solid #64FFDA"
+              h="330px"
+              w="300px"
+              pos="absolute"
+              bottom="28%"
+              left="16%"
+              borderRadius="4px"
+              zIndex="-1"
+            />
+          </GridItem>
+        </Grid>
+      </Box>
 
       {/* section 2 */}
-      <Box w="800px" margin="150px auto">
+      <Box w="800px" margin="150px auto" id="experience_section">
         <Flex cursor="pointer">
           <Text
             color="brand.green"
@@ -197,7 +191,7 @@ function AboutMe() {
               pb="16px"
               py="20px"
             >
-              Two
+              CRC
             </Tab>
             <Tab
               fontSize="16px"
@@ -207,7 +201,7 @@ function AboutMe() {
               pb="16px"
               py="20px"
             >
-              Three
+              Byteworks
             </Tab>
           </TabList>
 
@@ -222,39 +216,42 @@ function AboutMe() {
                 fontWeight="400"
                 mt="4px"
               >
-                April 2021 - Present
+                November 2020 - Present
               </Text>
               <Box>
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Write modern, performant, maintainable code for a diverse
-                    array of client and internal projects
+                  Manage front-end development of client sites. Use HTML, CSS (TailWind, Chakra, Boostrap, Styled Component), and JavaScript (ES6, NextJS, TypeScript, Vue, ReactJS) to develop UX.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Work with a variety of different languages, platforms,
-                    frameworks, and content management systems such as
-                    JavaScript, TypeScript, Gatsby, React, Craft, WordPress,
-                    Prismic, and Netlify
+                  Collaborate with backend developers to consume APIs, listen for and emit Web Socket events, and work with UI/UX designers to interpret and implement designs.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Communicate with multi-disciplinary teams of engineers,
-                    designers, producers, and clients on a daily basis
+                  Contribute to sprint planning, product mapping, and feature scoping sessions to help with an accurate estimation of resources and timelines.
                   </Text>
                 </Flex>
+
+                <Flex mt="20px">
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="16px" color="brand.gray">
+                	Performe manual and unit testing to ensure stability across a range of devices and browsers.
+                  </Text>
+                </Flex>
+
               </Box>
             </TabPanel>
             <TabPanel paddingTop="0px">
               <Text fontSize="24px" color="brand.white" fontWeight="600">
-                Social Media Strategist{" "}
+              Instructional Assistant
                 <chakra.span color="brand.green">
                   @ Professor Iya Abubakar Community Resource Center
                 </chakra.span>
@@ -265,39 +262,42 @@ function AboutMe() {
                 fontWeight="400"
                 mt="4px"
               >
-                August 2020 - June, 2021
+                July 2019 - June, 2020
               </Text>
               <Box>
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Write modern, performant, maintainable code for a diverse
-                    array of client and internal projects
+                  Performed administrative activities and support such as e-attendance, online assessment grading, and maintaining student records.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Work with a variety of different languages, platforms,
-                    frameworks, and content management systems such as
-                    JavaScript, TypeScript, Gatsby, React, Craft, WordPress,
-                    Prismic, and Netlify
+                  Maintained sensitivity towards students with additional needs, continually improving their development and confidence.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Communicate with multi-disciplinary teams of engineers,
-                    designers, producers, and clients on a daily basis
+                  Cultivated close working relationships with students and provided technical support to teaching staff.
                   </Text>
                 </Flex>
+
+                <Flex mt="20px">
+                  <Box paddingTop="5px">{playIcon}</Box>
+                  <Text ml="10px" fontSize="16px" color="brand.gray">
+                Tutored students individually and in small groups for learning development and guide them in the programming language of choice.
+                  </Text>
+                </Flex>
+
               </Box>
             </TabPanel>
             <TabPanel paddingTop="0px">
               <Text fontSize="24px" color="brand.white" fontWeight="600">
-                Intern{" "}
+              Application Developer (Internship)
                 <chakra.span color="brand.green">
                   @ Byteswork Embedded Systems Limited
                 </chakra.span>
@@ -308,32 +308,27 @@ function AboutMe() {
                 fontWeight="400"
                 mt="4px"
               >
-                April 2017 - 2018
+                August 2017 - February 2018
               </Text>
               <Box>
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Write modern, performant, maintainable code for a diverse
-                    array of client and internal projects
+                  Created standalone and payment applications for point-of-sales terminals like PAX and integrated them into various hosts like banks, and acquirers with C programming language.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Work with a variety of different languages, platforms,
-                    frameworks, and content management systems such as
-                    JavaScript, TypeScript, Gatsby, React, Craft, WordPress,
-                    Prismic, and Netlify
+                  Liaised with relevant parties using appropriate communication channels to develop Web applications for various institutions including banks and government using JavaScript, CSS, and HTML.
                   </Text>
                 </Flex>
 
                 <Flex mt="20px">
                   <Box paddingTop="5px">{playIcon}</Box>
                   <Text ml="10px" fontSize="16px" color="brand.gray">
-                    Communicate with multi-disciplinary teams of engineers,
-                    designers, producers, and clients on a daily basis
+                  Developed Embedded devices and solutions for product platforms and Smart card applications for both contact and contactless technology interfacing it with compatible POS terminals and deploying to different hosts and switches.
                   </Text>
                 </Flex>
               </Box>
@@ -343,7 +338,7 @@ function AboutMe() {
       </Box>
 
       {/* Section 3 */}
-      <Box>
+      <Box id="work_section">
         <Flex cursor="pointer">
           <Text
             color="brand.green"
@@ -381,7 +376,7 @@ function AboutMe() {
                 pos="relative"
               >
                 <Image
-                  src="img_rmv.png"
+                  src="zhill.png"
                   alt=""
                   h="100%"
                   w="100%"
@@ -401,7 +396,7 @@ function AboutMe() {
                   fontWeight="600"
                   mb="16px"
                 >
-                  Project Name
+                  Zhill website
                 </Text>
                 <Box
                   w="495px"
@@ -412,31 +407,32 @@ function AboutMe() {
                   padding="25px"
                 >
                   <Text color="brand.gray" textAlign="right" fontSize="16px">
-                    A minimal, dark blue theme for VS Code, Sublime Text, Atom,
-                    iTerm, and more. Available on Visual Studio Marketplace,
-                    Package Control, Atom Package Manager, and npm.
+                    Zhill Systems meets the business needs of emerging markets and help individuals, teams and organizations undergo successful agile and digital transformation and also sustain business agility.
                   </Text>
                 </Box>
 
                 <Flex justifyContent="flex-end" mt="40px">
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    VS Code
+                    TypeScript
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Sublime Text
+                    Next JS
                   </Text>
-                  <Text fontSize="13px" color="#A8B2D1" mr="10px">
+                  {/* <Text fontSize="13px" color="#A8B2D1" mr="10px">
                     Atom
-                  </Text>
+                  </Text> */}
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Hyper
+                    Tailwind css
                   </Text>
                 </Flex>
                 <Flex justifyContent="flex-end" mt="20px">
+                  <Link a href="https://github.com/abigail-dev-build/zhill.git">
                   <Box className={styles.svg} mr="25px">
                     {githubIcon}
                   </Box>
-                  <Box className={styles.svg}>{hostingIcon}</Box>
+
+                  </Link>
+                  {/* <Box className={styles.svg}>{hostingIcon}</Box> */}
                 </Flex>
               </Box>
             </GridItem>
@@ -459,7 +455,7 @@ function AboutMe() {
                   fontWeight="600"
                   mb="16px"
                 >
-                  Project Name
+                  NutAvailable
                 </Text>
                 <Box
                   w="495px"
@@ -470,33 +466,31 @@ function AboutMe() {
                   padding="25px"
                 >
                   <Text color="brand.gray" textAlign="left" fontSize="16px">
-                    A web app for visualizing personalized Spotify data. View
-                    your top artists, top tracks, recently played tracks, and
-                    detailed audio information about each track. Create and save
-                    new playlists of recommended tracks based on your existing
-                    playlists and more.
+                    A web app for placing orders, checking out and getting the delivery date for the orders within an organization.
                   </Text>
                 </Box>
 
                 <Flex justifyContent="flex-start" mt="40px">
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    VS Code
+                    TypeScript
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Sublime Text
+                    Tailwind css
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Atom
+                    NextJS
                   </Text>
-                  <Text fontSize="13px" color="#A8B2D1" mr="10px">
+                  {/* <Text fontSize="13px" color="#A8B2D1" mr="10px">
                     Hyper
-                  </Text>
+                  </Text> */}
                 </Flex>
                 <Flex justifyContent="flex-start" mt="20px">
+                  <Link a href="https://github.com/abigail-dev-build/miniEcommerce.git">
                   <Box className={styles.svg} mr="25px">
                     {githubIcon}
                   </Box>
-                  <Box className={styles.svg}>{hostingIcon}</Box>
+                  </Link>
+                  {/* <Box className={styles.svg}>{hostingIcon}</Box> */}
                 </Flex>
               </Box>
             </GridItem>
@@ -512,7 +506,7 @@ function AboutMe() {
                 // gridarea="1 / 6 / -1 / -1"
               >
                 <Image
-                  src="img_rmv.png"
+                  src="nutsAvailable.png"
                   alt=""
                   h="100%"
                   w="100%"
@@ -536,7 +530,7 @@ function AboutMe() {
                 pos="relative"
               >
                 <Image
-                  src="img_rmv.png"
+                  src="lms.png"
                   alt=""
                   h="100%"
                   w="100%"
@@ -556,7 +550,7 @@ function AboutMe() {
                   fontWeight="600"
                   mb="16px"
                 >
-                  Project Name
+                  LMS by Enyata
                 </Text>
                 <Box
                   w="495px"
@@ -567,37 +561,30 @@ function AboutMe() {
                   padding="25px"
                 >
                   <Text color="brand.gray" textAlign="right" fontSize="16px">
-                    Having struggled with understanding how the Spotify OAuth
-                    flow works, I made the course I wish I could have had.
-                    Unlike tutorials that only cover a few concepts and leave
-                    you with half-baked GitHub repositories, this course covers
-                    everything from explaining the principles of REST APIs to
-                    implementing Spotify&apos;s OAuth flow and fetching API data
-                    in a React app. By the end of the course, you’ll have an app
-                    deployed to the internet you can add to your portfolio.
+                    This web app is a learning management system that caters for the students, tutors and admin having the overall oversight of the entire app.
                   </Text>
                 </Box>
 
                 <Flex justifyContent="flex-end" mt="40px">
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    VS Code
+                    NextJS
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Sublime Text
+                    Chakra
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Atom
+                    Redux
                   </Text>
                   <Text fontSize="13px" color="#A8B2D1" mr="10px">
-                    Hyper
+                    React query
                   </Text>
                 </Flex>
-                <Flex justifyContent="flex-end" mt="20px">
+                {/* <Flex justifyContent="flex-end" mt="20px">
                   <Box className={styles.svg} mr="25px">
                     {githubIcon}
                   </Box>
                   <Box className={styles.svg}>{hostingIcon}</Box>
-                </Flex>
+                </Flex> */}
               </Box>
             </GridItem>
           </Grid>
@@ -612,14 +599,14 @@ function AboutMe() {
             >
               Other Noteworthy Projects
             </Text>
-            <Text
+            {/* <Text
               color="brand.green"
               fontSize="14px"
               fontWeight="400"
               textAlign="center"
             >
               View the archive
-            </Text>
+            </Text> */}
           </Box>
           <Box mt="40px">
             <Grid templateColumns="repeat(12, 1fr)" gap={4}>
@@ -634,18 +621,39 @@ function AboutMe() {
                   <Flex justifyContent="space-between">
                     <Box>{fileIcon}</Box>
                     <Flex d="flex" justifyContent="space-between">
-                      <div>{hostingIcon}</div>
+                      {/* <div>{hostingIcon}</div> */}
                       <Box ml="20px">{githubIcon}</Box>
                     </Flex>
                   </Flex>
-                  <Text mt="32px" fontSize="18px" fontWeight="800" color="brand.white" textAlign="left" className={styles.title}>Integrating Algolia Search with WordPress Multisite</Text>
-                  <Text color="brand.white" fontSize="16px" mt="14px">Building a custom multisite compactible Wordpress plugin to build global search with Algolia</Text>
+                  <Text
+                    mt="32px"
+                    fontSize="18px"
+                    fontWeight="800"
+                    color="brand.white"
+                    textAlign="left"
+                    className={styles.title}
+                  >
+                    Mirene
+                  </Text>
+                  <Text color="brand.white" fontSize="16px" mt="14px">
+                    This is a data protection and privacy website that ensures compliance of strict protection rules to be followed while uploading a user details.
+                  </Text>
 
-                  <Flex mt="24px"><Text mr="15px" fontSize="14px" color="brand.gray">Algolia</Text><Text mr="15px" fontSize="14px" color="brand.gray">WordPress</Text><Text mr="15px" fontSize="14px" color="brand.gray">PHP</Text></Flex>
+                  <Flex mt="24px">
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Nextjs
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Styled components
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Reactquery
+                    </Text>
+                  </Flex>
                 </Box>
               </GridItem>
               <GridItem colSpan={4}>
-                 <Box
+                <Box
                   h="304px"
                   w="323px"
                   bg="brand.lightNavy"
@@ -655,18 +663,39 @@ function AboutMe() {
                   <Flex justifyContent="space-between">
                     <Box>{fileIcon}</Box>
                     <Flex d="flex" justifyContent="space-between">
-                      <div>{hostingIcon}</div>
+                      {/* <div>{hostingIcon}</div> */}
                       <Box ml="20px">{githubIcon}</Box>
                     </Flex>
                   </Flex>
-                  <Text mt="32px" fontSize="18px" fontWeight="800" color="brand.white" textAlign="left" className={styles.title}>Integrating Algolia Search with WordPress Multisite</Text>
-                  <Text color="brand.white" fontSize="16px" mt="14px">Building a custom multisite compactible Wordpress plugin to build global search with Algolia</Text>
+                  <Text
+                    mt="32px"
+                    fontSize="18px"
+                    fontWeight="800"
+                    color="brand.white"
+                    textAlign="left"
+                    className={styles.title}
+                  >
+                    Food ordering app
+                  </Text>
+                  <Text color="brand.white" fontSize="16px" mt="14px">
+                    Built a custom food ordering app for a geographic area that onboards various vendors within the area and diverse end users.
+                  </Text>
 
-                  <Flex mt="24px"><Text mr="15px" fontSize="14px" color="brand.gray">Algolia</Text><Text mr="15px" fontSize="14px" color="brand.gray">WordPress</Text><Text mr="15px" fontSize="14px" color="brand.gray">PHP</Text></Flex>
+                  <Flex mt="24px">
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Nextjs
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Chakra
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Redux
+                    </Text>
+                  </Flex>
                 </Box>
               </GridItem>
               <GridItem colSpan={4}>
-                 <Box
+                <Box
                   h="304px"
                   w="323px"
                   bg="brand.lightNavy"
@@ -676,14 +705,35 @@ function AboutMe() {
                   <Flex justifyContent="space-between">
                     <Box>{fileIcon}</Box>
                     <Flex d="flex" justifyContent="space-between">
-                      <div>{hostingIcon}</div>
+                      {/* <div>{hostingIcon}</div> */}
                       <Box ml="20px">{githubIcon}</Box>
                     </Flex>
                   </Flex>
-                  <Text mt="32px" fontSize="18px" fontWeight="800" color="brand.white" textAlign="left" className={styles.title}>Integrating Algolia Search with WordPress Multisite</Text>
-                  <Text color="brand.white" fontSize="16px" mt="14px">Building a custom multisite compactible Wordpress plugin to build global search with Algolia</Text>
+                  <Text
+                    mt="32px"
+                    fontSize="18px"
+                    fontWeight="800"
+                    color="brand.white"
+                    textAlign="left"
+                    className={styles.title}
+                  >
+                    Wallet
+                  </Text>
+                  <Text color="brand.white" fontSize="16px" mt="14px">
+                    Simple application that enables deposit of e-cash and withdrawal as well as been able to check available balance.
+                  </Text>
 
-                  <Flex mt="24px"><Text mr="15px" fontSize="14px" color="brand.gray">Algolia</Text><Text mr="15px" fontSize="14px" color="brand.gray">WordPress</Text><Text mr="15px" fontSize="14px" color="brand.gray">PHP</Text></Flex>
+                  <Flex mt="24px">
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      Algolia
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      WordPress
+                    </Text>
+                    <Text mr="15px" fontSize="14px" color="brand.gray">
+                      PHP
+                    </Text>
+                  </Flex>
                 </Box>
               </GridItem>
             </Grid>
@@ -692,19 +742,60 @@ function AboutMe() {
       </Box>
 
       {/* section 4 */}
-      <Box w="800px" margin="150px auto">
-        <Text color="brand.green" fontSize="16px" textAlign="center">04. What&apos;s Next?</Text>
-        <Text color="brand.white" fontSize="60px" fontWeight="700" textAlign="center">Get In Touch</Text>
-        <Text color="brand.gray" textAlign="center" fontSize="16px" w="550px" m="0 auto">Although I&apos;m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</Text>
-<Flex justifyContent="center">
-        <a href="mailto:oluwaabigail@gmail.com"><Button mt="60px" border="1px solid #64FFDA" bg="transparent" h="48px" fontWeight="400" padding="16px 24px" color="brand.green" fontSize="16px" _focus={{ bg: 'transparent' }} _hover={{ bg: 'rgba(00, 255, 218, 0.1)'}}>Say Hello</Button></a>
-
-</Flex>
+      <Box w="800px" margin="150px auto" id="contact_section">
+        <Text color="brand.green" fontSize="16px" textAlign="center">
+          04. What&apos;s Next?
+        </Text>
+        <Text
+          color="brand.white"
+          fontSize="60px"
+          fontWeight="700"
+          textAlign="center"
+        >
+          Get In Touch
+        </Text>
+        <Text
+          color="brand.gray"
+          textAlign="center"
+          fontSize="16px"
+          w="550px"
+          m="0 auto"
+        >
+          {" "}
+          I&apos;m currently looking for new opportunities, my inbox is
+          always open. Whether you have a question, opportunities or
+          just want to say hi, I&apos;ll always get back to you!
+        </Text>
+        <Flex justifyContent="center">
+          <a href="mailto:oluwaabigail@gmail.com">
+            <Button
+              mt="60px"
+              border="1px solid #64FFDA"
+              bg="transparent"
+              h="48px"
+              fontWeight="400"
+              padding="16px 24px"
+              color="brand.green"
+              fontSize="16px"
+              _focus={{ bg: "transparent" }}
+              _hover={{ bg: "rgba(00, 255, 218, 0.1)" }}
+            >
+              Say Hello
+            </Button>
+          </a>
+        </Flex>
       </Box>
-
-      {/* footer */}
-      <Text fontSize="12px" color="brand.white" textAlign="center" _hover={{ color: 'brand.green' }} cursor="pointer">Built by Abigail Idowu</Text>
-      {/* put the github link */}
+      <a href="https://github.com/Essentiel16/portfolio_design">
+        <Text
+          fontSize="12px"
+          color="brand.white"
+          textAlign="center"
+          _hover={{ color: "brand.green" }}
+          cursor="pointer"
+        >
+          Built by Abigail Idowu
+        </Text>
+      </a>
     </Box>
   );
 }

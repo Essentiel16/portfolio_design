@@ -16,25 +16,25 @@ function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="navbar-toggler" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link href="#deets">
+            <Nav.Link href="#about_section">
             <Flex padding="10px" cursor="pointer">
              <Text color="brand.green">01.</Text>
              <Text color="brand.white" ml="5px">About</Text>
            </Flex>
             </Nav.Link>
-            <NavLink>
+            <NavLink href="#experience_section">
             <Flex padding="10px" cursor="pointer">
            <Text color="brand.green">02.</Text>
              <Text ml="5px" color="brand.white">Experience</Text>
            </Flex>
             </NavLink>
-            <NavLink>
+            <NavLink href="#work_section">
             <Flex padding="10px" cursor="pointer">
            <Text color="brand.green">03.</Text>
              <Text ml="5px" color="brand.white">Work</Text>
            </Flex>
             </NavLink>
-            <NavLink>
+            <NavLink href="#contact_section">
             <Flex padding="10px" cursor="pointer">
            <Text color="brand.green">04.</Text>
              <Text ml="5px" color="brand.white">Contact</Text>
