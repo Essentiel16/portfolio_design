@@ -135,7 +135,7 @@ function AboutMe() {
               h="330px"
               w="300px"
               pos="absolute"
-              bottom="28%"
+              bottom="13%"
               left="16%"
               borderRadius="4px"
               zIndex="-1"
@@ -725,13 +725,13 @@ function AboutMe() {
 
                   <Flex mt="24px">
                     <Text mr="15px" fontSize="14px" color="brand.gray">
-                      Algolia
+                      Reactjs
                     </Text>
                     <Text mr="15px" fontSize="14px" color="brand.gray">
-                      WordPress
+                      HTML
                     </Text>
                     <Text mr="15px" fontSize="14px" color="brand.gray">
-                      PHP
+                      CSS
                     </Text>
                   </Flex>
                 </Box>
